@@ -179,6 +179,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
+        const audio = new Audio('backs.mp3')
     addEventListener('DOMContentLoaded', () => {
         Swal.fire({
         title: '',
@@ -187,7 +188,7 @@
         confirmButtonText: 'OK'
         }).then(async(result)  => {
         if (result.isConfirmed) {
-            const audio = new Audio('https://github.com/SatganzDevs/sssass/raw/main/musc.mp3')
+            
         await audio.play()
         var elem = document.documentElement;
         var requestFullScreen = elem.requestFullscreen || elem.mozRequestFullScreen || elem.webkitRequestFullscreen || elem.msRequestFullscreen;
