@@ -209,32 +209,33 @@
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-const audio = new Audio('./assets/Tantei wa mou Shindeiru (si detektif sudah mati) Koko de Ikiteru Op lirik terjemahan.mp3')
-addEventListener('DOMContentLoaded', () => {
-Swal.fire({
-title: '',
-text: 'Website Loaded!',
-icon: 'success',
-confirmButtonText: 'OK'
-}).then(async(result)  => {
-if (result.isConfirmed) {
+    const audio = new Audio('./assets/Tantei wa mou Shindeiru (si detektif sudah mati) Koko de Ikiteru Op lirik terjemahan.mp3');
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        Swal.fire({
+            title: '',
+            text: 'Website Loaded!',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                await audio.play();
+                var elem = document.documentElement;
+                var requestFullScreen = elem.requestFullscreen || elem.mozRequestFullScreen || elem.webkitRequestFullscreen || elem.msRequestFullscreen;
+                if (requestFullScreen) {
+                    requestFullScreen.call(elem);
+                }
 
-await audio.play()
-var elem = document.documentElement;
-var requestFullScreen = elem.requestFullscreen || elem.mozRequestFullScreen || elem.webkitRequestFullscreen || elem.msRequestFullscreen;
-if (requestFullScreen) {
-requestFullScreen.call(elem);
-}
-}
-
-audio.addEventListener('ended', () => {
-audio.currentTime = 0; // Reset the audio time to start
-audio.play(); // Play the audio again
-});
-}
-});
-});
+                // Add event listener to loop the audio
+                audio.addEventListener('ended', () => {
+                    audio.currentTime = 0; // Reset the audio time to start
+                    audio.play(); // Play the audio again
+                });
+            }
+        });
+    });
 </script>
+
 <!--===== MAIN JS =====-->
 <script src="assets/js/main.js"></script>
 </body>
