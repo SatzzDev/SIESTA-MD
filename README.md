@@ -1,1 +1,1 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Playwrite+Danmark+Uloopet&pause=1000&center=true&vCenter=true&random=false&width=435&lines=SIESTA+-+AI+DOCUMENTATION;Created+By+SatzzDev.)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Playwrite+Danmark+Uloopet&pause=1000&center=true&vCenter=true&random=false&width=435&lines=SIESTA+AI;Created+By+SatzzDev.)](https://git.io/typing-svg)
